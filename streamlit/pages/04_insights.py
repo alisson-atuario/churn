@@ -18,7 +18,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("💡 Insights Globais e Recomendações Estratégicas")
+st.title("Insights Globais e Recomendações Estratégicas")
 st.markdown("""
 Análise consolidada dos principais fatores que causam churn e recomendações 
 acionáveis baseadas em dados e interpretabilidade do modelo (SHAP).

@@ -111,7 +111,6 @@ st.header("1. Análise de Contribuições - SHAP Waterfall")
 with st.expander("Visualização", expanded=True):
     st.plotly_chart(
         plot_shap_waterfall(shap_values, expected_value, feature_names, sample_idx),
-        width='stretch'
     )
     
     st.info("""

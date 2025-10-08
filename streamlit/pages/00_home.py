@@ -41,7 +41,7 @@ e insights sobre o comportamento dos clientes.
 kpis = get_main_kpis()
 
 # KPIs principais
-st.markdown("## 📊 KPIs Principais")
+st.markdown("## KPIs Principais")
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -90,7 +90,7 @@ with col6:
     )
 
 # Gráfico de tendência
-st.markdown("## 📈 Tendência de Churn por Tempo de Permanência")
+st.markdown("## Tendência de Churn por Tempo de Permanência")
 st.plotly_chart(plot_churn_trend())
 
 # Explicação do gráfico
@@ -103,7 +103,7 @@ enquanto a linha azul mostra o número total de clientes em cada faixa de tempo.
 # Principais Insights (baseados na análise dos dados)
 valor_perdido = calculate_value_lost_distribution(load_dataset())
 st.markdown(f"""
-## 🔍 Principais Insights
+## Principais Insights
 
 - **Perfil de Risco**: Clientes com contratos mensais apresentam maior taxa de churn
 - **Tempo de Permanência**: Clientes mais novos (<12 meses) têm maior propensão a cancelar
@@ -132,5 +132,6 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center'>
     <i>Dashboard de Análise de Churn | Desenvolvido por Alisson Ursulino</i>
+    <a href='https://alisson-atuario.github.io/' target='_blank' style='color: #3498db; text-decoration: none;'> (acesse o portfólio)</a>
 </div>
 """, unsafe_allow_html=True)

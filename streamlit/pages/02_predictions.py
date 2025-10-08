@@ -29,7 +29,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎯 Performance do Modelo de Predição")
+st.title("Performance do Modelo de Predição")
 st.markdown("""
 Avaliação completa do modelo LightGBM: métricas de classificação, análise de erros 
 e segmentação de clientes por nível de risco.

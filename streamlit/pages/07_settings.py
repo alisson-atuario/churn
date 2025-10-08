@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("⚙️ Configurações e Ferramentas")
+st.title("Configurações e Ferramentas")
 st.markdown("""
 Ajuste configurações do modelo, exporte relatórios e gerencie parâmetros do sistema.
 """)
@@ -54,9 +54,9 @@ with st.expander("Parâmetros de Predição", expanded=True):
         if calibrator is None:
             st.warning("⚠️ Calibrador não disponível. Execute o notebook de calibração.")
         elif use_calibration:
-            st.success("✅ Calibração ativada")
+            st.success("Calibração ativada")
         else:
-            st.info("ℹ️ Usando modelo sem calibração")
+            st.info("Usando modelo sem calibração")
     
     with col2:
         st.markdown("### Threshold de Decisão")
@@ -76,7 +76,7 @@ with st.expander("Parâmetros de Predição", expanded=True):
         elif threshold > 0.5:
             st.info(f"🔺 Threshold alto ({threshold:.2f}): Mais conservador, menos falsos positivos mas pode perder churns")
         else:
-            st.info(f"⚖️ Threshold balanceado (0.50)")
+            st.info(f"Threshold balanceado (0.50)")
 
 #%% 2. Segmentação de Risco
 st.header("2. Configuração de Segmentos de Risco")
@@ -117,10 +117,10 @@ with st.expander("Thresholds de Segmentação", expanded=True):
     
     # Validação
     if low_max >= high_min:
-        st.error("❌ Erro: Threshold de Baixo Risco deve ser menor que Alto Risco")
+        st.error("Erro: Threshold de Baixo Risco deve ser menor que Alto Risco")
     else:
         st.session_state.risk_thresholds = {'low': low_max, 'high': high_min}
-        st.success(f"✅ Segmentos configurados: Baixo [0-{low_max:.2f}], Médio [{low_max:.2f}-{high_min:.2f}], Alto [{high_min:.2f}-1.0]")
+        st.success(f"Segmentos configurados: Baixo [0-{low_max:.2f}], Médio [{low_max:.2f}-{high_min:.2f}], Alto [{high_min:.2f}-1.0]")
 
 #%% 3. Exportação de Dados
 st.header("3. Exportar Relatórios")
@@ -238,7 +238,7 @@ st.header("5. Manutenção e Atualização")
 
 with st.expander("Ferramentas de Administração", expanded=True):
     st.markdown("""
-    ### ⚠️ Ações Administrativas
+    ### Ações Administrativas
     
     Estas ações requerem acesso ao backend do sistema.
     """)
@@ -253,10 +253,10 @@ with st.expander("Ferramentas de Administração", expanded=True):
         - Requisitos: Novos dados rotulados
         - Processo: Executar notebook de treinamento
         
-        📝 Próximo re-treinamento sugerido: **Abril 2025**
+        Próximo re-treinamento sugerido: **Abril 2025**
         """)
         
-        if st.button("🔄 Solicitar Re-treinamento", disabled=True):
+        if st.button("Solicitar Re-treinamento", disabled=True):
             st.info("Feature em desenvolvimento")
     
     with col2:
@@ -267,10 +267,10 @@ with st.expander("Ferramentas de Administração", expanded=True):
         - Verificar degradação de performance
         - Atualizar calibração se necessário
         
-        📊 Última validação: **Janeiro 2025**
+        Última validação: **Janeiro 2025**
         """)
         
-        if st.button("✅ Executar Validação", disabled=True):
+        if st.button("Executar Validação", disabled=True):
             st.info("Feature em desenvolvimento")
 
 #%% 6. Logs e Histórico
@@ -290,7 +290,7 @@ with st.expander("Histórico de Uso", expanded=False):
     """)
 
 # 7. Sobre
-st.header("7. ℹ️ Sobre o Sistema")
+st.header("7. Sobre o Sistema")
 
 with st.expander("Informações", expanded=False):
     col1, col2 = st.columns(2)
@@ -309,9 +309,10 @@ with st.expander("Informações", expanded=False):
         st.markdown("""
         **Contato e Suporte**
         
-        - 📧 Email: alisson.atuario@gmail.com
-        - 📚 Documentação: [docs.churnanalysis.com](https://docs.churnanalysis.com)
-        - 🐛 Reportar bug: [GitHub Issues](https://github.com/alisson-atuario)
+        - Portifólio: [alisson-atuario.github.io](https://alisson-atuario.github.io)
+        - Email: alisson.atuario@gmail.com
+        - Documentação Técnica: [github.com/alisson-atuario/churn](https://github.com/alisson-atuario/churn)
+        - Reportar bug: [GitHub Issues](https://github.com/alisson-atuario/churn/issues)
         """)
 
 # Navegação

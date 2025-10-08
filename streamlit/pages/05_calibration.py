@@ -22,7 +22,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎯 Calibração e Otimização de Probabilidades")
+st.title("Calibração e Otimização de Probabilidades")
 st.markdown("""
 Análise da **confiabilidade das probabilidades** e otimização do threshold de decisão.
 Entenda como a calibração Venn-ABERS melhora a precisão das predições.
@@ -58,7 +58,7 @@ with st.expander("Conceito Fundamental", expanded=True):
     
     with col1:
         st.markdown("""
-        ### 🤔 O Problema
+        ### O Problema
         
         Modelos de ML frequentemente produzem **probabilidades não calibradas**:
         
@@ -73,7 +73,7 @@ with st.expander("Conceito Fundamental", expanded=True):
     
     with col2:
         st.markdown("""
-        ### ✅ A Solução
+        ### A Solução
         
         **Calibração** ajusta as probabilidades para refletir frequências reais:
         
@@ -166,7 +166,7 @@ st.header("4. Otimização de Threshold")
 
 with st.expander("Trade-off Precision vs Recall", expanded=True):
     st.markdown("""
-    ### 🎯 Por que otimizar o threshold?
+    ### Por que otimizar o threshold?
     
     O threshold padrão (0.5) nem sempre é ideal para negócios. Dependendo do custo:
     - **Perder um cliente** (Falso Negativo)
