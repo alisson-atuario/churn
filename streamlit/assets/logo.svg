@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ampulheta superior -->
+  <polygon points="110,50 290,50 200,150" fill="#000000"/>
+  
+  <!-- Ampulheta inferior -->
+  <polygon points="200,150 110,250 290,250" fill="#000000"/>
+  
+  <!-- Texto AU -->
+  <text x="200" y="400" font-family="serif" font-size="140" font-weight="normal" text-anchor="middle" fill="#000000">AU</text>
+</svg>
