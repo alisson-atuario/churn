@@ -64,10 +64,10 @@ with st.expander("Visualização",expanded=True):
         col_a, col_b = st.columns(2)
         
         with col_a:
-            st.plotly_chart(plot_numeric_cols_distribution(col), width='stretch')
+            st.plotly_chart(plot_numeric_cols_distribution(col))
         
         with col_b:
-            st.plotly_chart(plot_histograms_by_churn(col), width='stretch')
+            st.plotly_chart(plot_histograms_by_churn(col))
             # st.info("""💡 **Principais Achados da Análise Categórica**  
             #         - Clientes com **contratos mensais** e **até 12 meses de permanência** apresentam risco muito maior de churn.  
             #         - O método de pagamento também pesa: **Electronic check** é mais associado ao cancelamento.  

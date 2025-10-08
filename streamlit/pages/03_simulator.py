@@ -155,7 +155,7 @@ with st.expander("Ver todas as características", expanded=False):
     )
     features_df.index.name = 'Feature'
     
-    st.dataframe(features_df, width='stretch')
+    st.dataframe(features_df)
 
 #%% 4. Análise de Dependência (Feature Específica)
 st.header("4. Análise de Dependência - Como uma Feature Impacta?")
@@ -207,7 +207,7 @@ with st.expander("Análise Comparativa", expanded=False):
                 'Real': "Churn" if y_cal.iloc[idx] == 1 else "Não Churn"
             })
         
-        st.dataframe(pd.DataFrame(comparison_data), width='stretch')
+        st.dataframe(pd.DataFrame(comparison_data))
     else:
         st.info("Nenhum cliente com risco muito similar encontrado no dataset.")
 
@@ -258,15 +258,15 @@ st.markdown("## Navegação")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("← Voltar para Predictions", width='stretch'):
+    if st.button("← Voltar para Predictions"):
         st.switch_page("pages/02_predictions.py")
 
 with col_nav2:
-    if st.button("Ver Insights Globais →", width='stretch'):
+    if st.button("Ver Insights Globais →"):
         st.switch_page("pages/04_insights.py")
 
 with col_nav3:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 # Rodapé

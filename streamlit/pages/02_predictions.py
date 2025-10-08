@@ -73,7 +73,7 @@ with st.expander("Indicadores Chave", expanded=True):
 st.header("2. Comparação de Métricas por Classe")
 
 with st.expander("Visualização", expanded=True):
-    st.plotly_chart(plot_metrics_comparison_bar(class_report), width='stretch')
+    st.plotly_chart(plot_metrics_comparison_bar(class_report))
 
 #%% 3. Matriz de Confusão
 st.header("3. Análise de Erros - Matriz de Confusão")
@@ -82,7 +82,7 @@ with st.expander("Visualização", expanded=True):
     col_a, col_b = st.columns([2, 3])
     
     with col_a:
-        st.plotly_chart(plot_confusion_matrix(metrics['confusion_matrix']), width='stretch')
+        st.plotly_chart(plot_confusion_matrix(metrics['confusion_matrix']))
     
     with col_b:
         st.markdown("### Interpretação dos Resultados")
@@ -115,7 +115,7 @@ with st.expander("Visualização", expanded=True):
 st.header("4. Curvas ROC e Precision-Recall")
 
 with st.expander("Visualização", expanded=True):
-    st.plotly_chart(plot_roc_and_pr_curves(metrics), width='stretch')
+    st.plotly_chart(plot_roc_and_pr_curves(metrics))
     
     col1, col2 = st.columns(2)
     with col1:
@@ -135,7 +135,7 @@ with st.expander("Visualização", expanded=True):
 st.header("5. Distribuição das Probabilidades Preditas")
 
 with st.expander("Visualização", expanded=True):
-    st.plotly_chart(plot_probability_distribution_by_class(y_test, y_pred_proba), width='stretch')
+    st.plotly_chart(plot_probability_distribution_by_class(y_test, y_pred_proba))
     
     st.info("""
     **Análise ideal:**
@@ -153,11 +153,11 @@ with st.expander("Análise", expanded=True):
     col1, col2 = st.columns([3, 2])
     
     with col1:
-        st.plotly_chart(plot_risk_segments(risk_summary), width='stretch')
+        st.plotly_chart(plot_risk_segments(risk_summary))
     
     with col2:
         st.markdown("### Resumo por Segmento")
-        st.dataframe(risk_summary, width='stretch')
+        st.dataframe(risk_summary)
     
     # Insights dinâmicos
     alto_risco = risk_summary.loc['Alto Risco']
@@ -187,15 +187,15 @@ st.markdown("## Navegação")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("← Voltar para Exploratory", width='stretch'):
+    if st.button("← Voltar para Exploratory"):
         st.switch_page("pages/01_exploratory.py")
 
 with col_nav2:
-    if st.button("Ir para Simulador →", width='stretch'):
+    if st.button("Ir para Simulador →"):
         st.switch_page("pages/03_simulator.py")
 
 with col_nav3:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 X_test, y_test = load_test_data()

@@ -147,7 +147,7 @@ with st.expander("Visualização", expanded=True):
     # Plota curva
     fig = plot_calibration_curve(prob_pred_raw, prob_true_raw, y_proba_cal, y_test)
     
-    st.plotly_chart(fig, width='stretch')
+    st.plotly_chart(fig)
     
     st.info("""
     **Como interpretar:**
@@ -181,7 +181,7 @@ with st.expander("Trade-off Precision vs Recall", expanded=True):
     # Plota gráfico
     fig = plot_threshold_evaluation(thresholds, precisions, recalls, f1_scores, f2_scores, best_threshold)
     
-    st.plotly_chart(fig, width='stretch')
+    st.plotly_chart(fig)
     
     col1, col2, col3 = st.columns(3)
     
@@ -266,7 +266,7 @@ with st.expander("Teste Diferentes Thresholds", expanded=True):
             height=400
         )
         
-        st.plotly_chart(fig_cm, width='stretch')
+        st.plotly_chart(fig_cm)
         
         # Interpretação
         total_churns = tp_sim + fn_sim
@@ -333,15 +333,15 @@ st.markdown("## Navegação")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("← Voltar para Insights Estratégicos", width='stretch'):
+    if st.button("← Voltar para Insights Estratégicos"):
         st.switch_page("pages/04_insights.py")
 
 with col_nav2:
-    if st.button("Ir para Documentação Técnica →", width='stretch'):
+    if st.button("Ir para Documentação Técnica →"):
         st.switch_page("pages/06_technical.py")
 
 with col_nav3:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 

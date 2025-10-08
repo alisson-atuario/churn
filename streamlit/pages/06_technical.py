@@ -121,7 +121,7 @@ with st.expander("Detalhes do Modelo", expanded=True):
                 {'Parâmetro': name, 'Valor': params.get(name, 'N/A')}
                 for name in param_names if name in params
             ])
-            st.dataframe(params_df, width='stretch', hide_index=True)
+            st.dataframe(params_df, hide_index=True)
 
 #%% 3. Processo de Otimização
 st.header("3. Otimização de Hiperparâmetros")
@@ -335,7 +335,7 @@ with st.expander("Metadados do Modelo", expanded=True):
     }
     
     df_metadata = pd.DataFrame(list(metadata.items()), columns=['Item', 'Valor'])
-    st.dataframe(df_metadata, width='stretch', hide_index=True)
+    st.dataframe(df_metadata, hide_index=True)
 
 # Navegação
 st.markdown("---")
@@ -344,15 +344,15 @@ st.markdown("## Navegação")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("← Voltar para Calibração", width='stretch'):
+    if st.button("← Voltar para Calibração"):
         st.switch_page("pages/05_calibration.py")
 
 with col_nav2:
-    if st.button("Ir para Configurações →", width='stretch'):
+    if st.button("Ir para Configurações →"):
         st.switch_page("pages/07_settings.py")
 
 with col_nav3:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 # Rodapé

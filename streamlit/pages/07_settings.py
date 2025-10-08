@@ -154,7 +154,7 @@ with st.expander("Download de Dados", expanded=True):
             
             predictions_df['Segmento_Risco'] = predictions_df['Probabilidade_Churn'].apply(classify_risk)
             
-            st.dataframe(predictions_df.head(10), width='stretch')
+            st.dataframe(predictions_df.head(10))
             
             # Botão de download
             csv = predictions_df.to_csv(index=False).encode('utf-8')
@@ -190,7 +190,7 @@ with st.expander("Download de Dados", expanded=True):
             }
             
             metrics_df = pd.DataFrame(metrics_report)
-            st.dataframe(metrics_df, width='stretch', hide_index=True)
+            st.dataframe(metrics_df, hide_index=True)
             
             # Download métricas
             metrics_csv = metrics_df.to_csv(index=False).encode('utf-8')
@@ -228,7 +228,7 @@ with st.expander("Informações Gerais", expanded=True):
         # Tabela de segmentação
         st.markdown("### Distribuição por Segmento de Risco")
         risk_summary = create_risk_segments(y_pred_proba, y_test)
-        st.dataframe(risk_summary, width='stretch')
+        st.dataframe(risk_summary)
         
     except Exception as e:
         st.error(f"Erro ao carregar estatísticas: {str(e)}")
@@ -256,7 +256,7 @@ with st.expander("Ferramentas de Administração", expanded=True):
         📝 Próximo re-treinamento sugerido: **Abril 2025**
         """)
         
-        if st.button("🔄 Solicitar Re-treinamento", width='stretch', disabled=True):
+        if st.button("🔄 Solicitar Re-treinamento", disabled=True):
             st.info("Feature em desenvolvimento")
     
     with col2:
@@ -270,7 +270,7 @@ with st.expander("Ferramentas de Administração", expanded=True):
         📊 Última validação: **Janeiro 2025**
         """)
         
-        if st.button("✅ Executar Validação", width='stretch', disabled=True):
+        if st.button("✅ Executar Validação", disabled=True):
             st.info("Feature em desenvolvimento")
 
 #%% 6. Logs e Histórico
@@ -321,11 +321,11 @@ st.markdown("## Navegação")
 col_nav1, col_nav2 = st.columns(2)
 
 with col_nav1:
-    if st.button("← Voltar para Documentação Técnica", width='stretch'):
+    if st.button("← Voltar para Documentação Técnica"):
         st.switch_page("pages/05_technical.py")
 
 with col_nav2:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 # Rodapé

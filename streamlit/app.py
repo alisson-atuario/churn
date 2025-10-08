@@ -1,4 +1,8 @@
 import streamlit as st
+import warnings
+
+# Suprime o aviso do Plotly
+warnings.filterwarnings("ignore", message="The keyword arguments have been deprecated")
 
 st.set_page_config(
     page_title="Dashboard de Churn",

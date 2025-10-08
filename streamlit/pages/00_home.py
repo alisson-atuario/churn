@@ -91,7 +91,7 @@ with col6:
 
 # Gráfico de tendência
 st.markdown("## 📈 Tendência de Churn por Tempo de Permanência")
-st.plotly_chart(plot_churn_trend(), width='stretch')
+st.plotly_chart(plot_churn_trend())
 
 # Explicação do gráfico
 st.info("""
@@ -116,15 +116,15 @@ st.markdown("## Navegação Rápida")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("📊 Análise Exploratória", width='stretch'):
+    if st.button("📊 Análise Exploratória"):
         st.switch_page("pages/01_exploratory.py")
 
 with col_nav2:
-    if st.button("🎯 Previsões", width='stretch'):
+    if st.button("🎯 Previsões"):
         st.switch_page("pages/02_predictions.py")
 
 with col_nav3:
-    if st.button("💡 Recomendações", width='stretch'):
+    if st.button("💡 Recomendações"):
         st.switch_page("pages/04_insights.py")
 
 # Rodapé

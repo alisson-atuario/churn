@@ -44,7 +44,7 @@ with st.expander("Importância Global das Features", expanded=True):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.plotly_chart(plot_shap_importance(shap_values, feature_names), width='stretch')
+        st.plotly_chart(plot_shap_importance(shap_values, feature_names))
     
     with col2:
         st.markdown("### Top 5 Features")
@@ -60,7 +60,7 @@ with st.expander("Importância Global das Features", expanded=True):
 st.header("2. Análise Detalhada de Impacto")
 
 with st.expander("SHAP Summary Plot", expanded=True):
-    st.plotly_chart(plot_shap_summary(shap_values, feature_names), width='stretch')
+    st.plotly_chart(plot_shap_summary(shap_values, feature_names))
     
     st.info("""
     **Como interpretar este gráfico:**
@@ -288,15 +288,15 @@ st.markdown("## Navegação")
 col_nav1, col_nav2, col_nav3 = st.columns(3)
 
 with col_nav1:
-    if st.button("← Voltar para Simulador", width='stretch'):
+    if st.button("← Voltar para Simulador"):
         st.switch_page("pages/03_simulator.py")
 
 with col_nav2:
-    if st.button("Ir para Calibração →", width='stretch'):
+    if st.button("Ir para Calibração →"):
         st.switch_page("pages/05_calibration.py")
 
 with col_nav3:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 # Rodapé

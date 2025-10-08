@@ -103,8 +103,8 @@ def plot_numeric_cols_distribution(col):
             y=data.loc[data['Churn']=='Yes', col],
             name='Churn',
             line=dict(color='indianred'),
-            box_visible=True,
-            meanline_visible=True
+            box=dict(visible=True), #box_visible=True,
+            meanline=dict(visible=True) #meanline_visible=True
         )
     )       
 
@@ -113,8 +113,8 @@ def plot_numeric_cols_distribution(col):
             y=data.loc[data['Churn']=='No', col],
             name='No Churn',
             line=dict(color='royalblue'),
-            box_visible=True,
-            meanline_visible=True
+            box=dict(visible=True),#box_visible=True,
+            meanline=dict(visible=True)#meanline_visible=True
         )
     )       
 
