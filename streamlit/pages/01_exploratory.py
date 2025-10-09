@@ -153,11 +153,11 @@ st.markdown("## Navegação")
 col_nav1, col_nav2 = st.columns(2)
 
 with col_nav1:
-    if st.button("Ir para Previsões →", width='stretch'):
+    if st.button("Ir para Previsões →"):
         st.switch_page("pages/02_predictions.py")
 
 with col_nav2:
-    if st.button("🏠 Home", width='stretch'):
+    if st.button("🏠 Home"):
         st.switch_page("00_home.py")
 
 # Rodapé
