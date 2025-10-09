@@ -131,7 +131,7 @@ with col_nav3:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center'>
-    <i>Dashboard de Análise de Churn | Desenvolvido por Alisson Ursulino</i>
-    <a href='https://alisson-atuario.github.io/' target='_blank' style='color: #3498db; text-decoration: none;'> (acesse o portfólio)</a>
+    <i>Dashboard de Análise de Churn | Desenvolvido por Alisson Ursulino</i><br>
+    <a href='https://alisson-atuario.github.io/' target='_blank' style='color: #3498db; text-decoration: none;'>(Ver portfólio e outros projetos)</a>
 </div>
 """, unsafe_allow_html=True)

@@ -205,6 +205,7 @@ print(len(X_test))
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center'>
-    <i>Dashboard de Análise de Churn | Desenvolvido por Alisson Ursulino</i>
+    <i>Dashboard de Análise de Churn | Desenvolvido por Alisson Ursulino</i><br>
+    <a href='https://alisson-atuario.github.io/' target='_blank' style='color: #3498db; text-decoration: none;'>(Ver portfólio e outros projetos)</a>
 </div>
 """, unsafe_allow_html=True)
