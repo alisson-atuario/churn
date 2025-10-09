@@ -196,7 +196,7 @@ with col_nav2:
 
 with col_nav3:
     if st.button("🏠 Home"):
-        st.switch_page("00_home.py")
+        st.switch_page("pages/00_home.py")
 
 X_test, y_test = load_test_data()
 print(len(X_test))

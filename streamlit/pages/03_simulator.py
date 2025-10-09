@@ -170,7 +170,6 @@ with st.expander("Visualização", expanded=False):
     
     st.plotly_chart(
         plot_shap_dependence(shap_values, X_cal.values, feature_names, feature_idx),
-        width='stretch'
     )
     
     st.info(f"""
@@ -266,7 +265,7 @@ with col_nav2:
 
 with col_nav3:
     if st.button("🏠 Home"):
-        st.switch_page("00_home.py")
+        st.switch_page("pages/00_home.py")
 
 # Rodapé
 st.markdown("---")

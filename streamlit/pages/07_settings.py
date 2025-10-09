@@ -327,7 +327,7 @@ with col_nav1:
 
 with col_nav2:
     if st.button("🏠 Home"):
-        st.switch_page("00_home.py")
+        st.switch_page("pages/00_home.py")
 
 # Rodapé
 st.markdown("---")

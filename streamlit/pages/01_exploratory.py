@@ -121,16 +121,14 @@ with st.expander("Visualização",expanded=True):
             with col_a:
                 col_name = selected_categoric[i]
                 st.subheader(f"{col_name}")
-                st.plotly_chart(generate_graph_analyses(col_name), 
-                width='stretch',key=f"plot_{col_name}_{i}")
+                st.plotly_chart(generate_graph_analyses(col_name),key=f"plot_{col_name}_{i}")
 
              # Segunda Coluna
             with col_b:
                 if i+1 < len(selected_categoric):
                     col_name = selected_categoric[i+1]
                     st.subheader(f"{col_name}")
-                    st.plotly_chart(generate_graph_analyses(col_name),
-                     width='stretch',key=f"plot_{col_name}_{i+1}")
+                    st.plotly_chart(generate_graph_analyses(col_name),key=f"plot_{col_name}_{i+1}")
             
 
 
@@ -158,7 +156,7 @@ with col_nav1:
 
 with col_nav2:
     if st.button("🏠 Home"):
-        st.switch_page("00_home.py")
+        st.switch_page("pages/00_home.py")
 
 # Rodapé
 st.markdown("---")
