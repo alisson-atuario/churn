@@ -174,12 +174,20 @@ with st.expander("Visualização", expanded=False):
     
     st.info(f"""
     **Interpretação:**
-    - Cada ponto é um cliente
-    - **Eixo X**: Valor da feature "{selected_feature}"
-    - **Eixo Y**: Impacto SHAP (quanto aumenta/diminui probabilidade de churn)
-    - **Cor**: Valor da feature (vermelho = alto, azul = baixo)
-    
-    Padrão crescente = quanto maior o valor, maior o risco de churn.
+
+    - Cada ponto é uma observação (cliente) no conjunto de dados
+    - **Eixo X**: Valor real da feature "{selected_feature}"
+    - **Eixo Y**: Impacto SHAP - quanto esse valor específico contribui para a previsão
+    - Valores POSITIVOS: aumentam a probabilidade do churn
+    - Valores NEGATIVOS: diminuem a probabilidade do churn
+    - Cor: Valor da própria feature (apenas para identificação visual)
+    - Mostra a distribuição dos valores da feature no eixo X
+    - Não representa magnitude do impacto SHAP
+
+    Padrão a observar:
+    - Tendência crescente: valores maiores da feature aumentam o churn
+    - Tendência decrescente: valores maiores da feature diminuem o churn  
+    - Dispersão vertical: força do impacto no modelo
     """)
 
 #%% 5. Comparação com outros clientes
